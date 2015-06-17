@@ -11,7 +11,7 @@ authors:
       sponsor_uri: http://www.jcvi.org
 
 type: query
-main_module: reporter_images.services.lines_by_locus.main.py
+main_module: services.lines_by_locus.main.py
 url: http://www.jcvi.org/arabidopsis/qpcr/LineIDPerLocus.php
 validate_request: true
 whitelist:
