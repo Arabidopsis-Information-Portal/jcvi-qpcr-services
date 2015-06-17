@@ -3,7 +3,7 @@ import re
 import urlparse
 import json
 
-JCVI_BASE_URL = 'http://arabidopsis.jcvi.org/arabidopsis/qpcr/'
+JCVI_BASE_URL = 'http://www.jcvi.org/arabidopsis/qpcr/'
 
 def is_valid_agi_identifier(ident):
     p = re.compile(r'AT[1-5MC]G[0-9]{5,5}\.[0-9]+', re.IGNORECASE)
