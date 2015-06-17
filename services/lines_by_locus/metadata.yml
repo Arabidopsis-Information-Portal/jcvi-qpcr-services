@@ -1,0 +1,29 @@
+---
+
+name: lines_by_locus
+description: JCVI Reporter Image Webservice returns lines given a locus 
+version: 0.1
+
+authors:
+    - name: Erik Ferlanti
+      email: erik@jcvi.org
+      sponsor_organization: JCVI
+      sponsor_uri: http://www.jcvi.org
+
+type: query
+main_module: reporter_images.services.lines_by_locus.main.py
+url: http://arabidopsis.jcvi.org/arabidopsis/qpcr/LineIDPerLocus.php
+validate_request: true
+whitelist:
+    - arabidopsis.jcvi.org
+requirements:
+    - requests
+
+endpoints:
+    /search:
+        parameters:
+            - name: locus
+              description: AGI Gene Locus identifier 
+              type: string
+              required: true
+              default: AT1G51960
