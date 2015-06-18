@@ -1,0 +1,28 @@
+---
+
+name: podefinition_by_code
+description: JCVI Reporter Image Webservice returns a PO definition given a PO Code
+version: 0.1
+
+authors:
+    - name: Erik Ferlanti
+      email: erik@jcvi.org
+      sponsor_organization: JCVI
+      sponsor_uri: http://www.jcvi.org
+
+type: query
+main_module: services.podefinition_by_code.main.py
+url: http://www.jcvi.org/arabidopsis/qpcr/POInfoPerCode.php
+validate_request: true
+whitelist:
+    - www.jcvi.org
+requirements:
+    - requests
+
+endpoints:
+    /search:
+        parameters:
+            - name: po_code
+              description: PO Code
+              type: string
+              required: true
