@@ -1,0 +1,28 @@
+---
+
+name: images_by_line
+description: JCVI Reporter Image Webservice returns images given a line
+version: 0.1
+
+authors:
+    - name: Erik Ferlanti
+      email: erik@jcvi.org
+      sponsor_organization: JCVI
+      sponsor_uri: http://www.jcvi.org
+
+type: query
+main_module: services.images_by_line.main.py
+url: http://www.jcvi.org/arabidopsis/qpcr/ImageIDPerLineID.php
+validate_request: true
+whitelist:
+    - www.jcvi.org
+requirements:
+    - requests
+
+endpoints:
+    /search:
+        parameters:
+            - name: line
+              description: Line (combination of plate, well, plant & dip number)
+              type: string
+              required: true
