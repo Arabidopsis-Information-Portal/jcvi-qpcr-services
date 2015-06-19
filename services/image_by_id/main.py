@@ -18,7 +18,7 @@ def search(args):
     """
     Make the request to the remote service
     """
-    response = tools.do_request_generic('get_image.php', payload)
+    response = tools.do_request_generic('get_image.php', **payload)
 
     """
     At this point, we've gotten a 200 status from the remote GET so we
