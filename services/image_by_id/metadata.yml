@@ -12,7 +12,7 @@ authors:
 
 type: generic
 main_module: services.image_by_id.main.py
-url: http://www.jcvi.org/arabidopsis/qpcr/view.php
+url: http://www.jcvi.org/arabidopsis/qpcr/get_image.php
 validate_request: true
 whitelist:
     - www.jcvi.org
@@ -27,3 +27,11 @@ endpoints:
               type: integer
               format: int32
               required: true
+            - name: width
+              description: Width of image (resize)
+              type: integer
+              format: int32
+            - name: height
+              description: Height of image (resize)
+              type: integer
+              format: int32

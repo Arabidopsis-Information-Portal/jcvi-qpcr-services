@@ -4,14 +4,21 @@ def search(args):
     """
     args contains a dict with one or key:values
 
-    image_id is an image identifier and is mandatory
+    image_id: an image identifier and is mandatory
+    width: image dimension to resize (optional)
+    height: image dimension to resize (optional)
     """
-    image_id = args['image_id']
+    payload = {'image_id': args['image_id']}
+
+    if args.has_key('width'):
+        payload['width'] = args['width']
+    if args.has_key('height'):
+        payload['height'] = args['height']
 
     """
     Make the request to the remote service
     """
-    response = tools.do_request_generic('view.php', file=image_id)
+    response = tools.do_request_generic('get_image.php', payload)
 
     """
     At this point, we've gotten a 200 status from the remote GET so we
