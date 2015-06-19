@@ -31,7 +31,9 @@ endpoints:
               description: Width of image (resize)
               type: integer
               format: int32
+              required: false
             - name: height
               description: Height of image (resize)
               type: integer
               format: int32
+              required: false
