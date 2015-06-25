@@ -4,6 +4,7 @@ import urlparse
 import json
 
 JCVI_BASE_URL = 'http://www.jcvi.org/arabidopsis/qpcr/'
+JCVI_BASE_CGI_URL = 'http://www.jcvi.org/cgi-bin/arabidopsis/qpcr/'
 
 def is_valid_agi_identifier(ident):
     p = re.compile(r'AT[1-5MC]G[0-9]{5,5}\.[0-9]+', re.IGNORECASE)
@@ -15,6 +16,22 @@ def do_request(endpoint, **kwargs):
     """Perform a request to SITE and return JSON."""
 
     url = urlparse.urljoin(JCVI_BASE_URL, endpoint)
+    response = requests.get(url, verify=False, params=kwargs)
+
+    # Raise exception and abort if requests is not successful
+    response.raise_for_status()
+
+    try:
+        # Try to convert result to JSON
+        # abort if not possible
+        return response.json()
+    except ValueError:
+        raise Exception('not a JSON object: {}'.format(response.text))
+
+def do_request_cgi(endpoint, **kwargs):
+    """Perform a request to SITE and return JSON."""
+
+    url = urlparse.urljoin(JCVI_BASE_CGI_URL, endpoint)
     response = requests.get(url, verify=False, params=kwargs)
 
     # Raise exception and abort if requests is not successful

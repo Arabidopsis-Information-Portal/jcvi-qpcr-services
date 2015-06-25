@@ -1,0 +1,59 @@
+---
+
+name: expression_condition_comparison
+description: JCVI RT-qPCR Webservice returns expression comparison data
+version: 0.3
+
+authors:
+    - name: Erik Ferlanti
+      email: erik@jcvi.org
+      sponsor_organization: JCVI
+      sponsor_uri: http://www.jcvi.org
+
+type: query
+main_module: services.expression_condition_comparison.main.py
+url: http://www.jcvi.org/cgi-bin/arabidopsis/qpcr/ExpressionConditionComparison
+validate_request: true
+whitelist:
+    - www.jcvi.org
+icon: jcvi-logo.png
+requirements:
+    - requests
+
+endpoints:
+    /search:
+        parameters:
+            - name: material1
+              description: Tissue or treatment type
+              type: string
+              required: true
+              default: 'root'
+              enum:
+                  - 'flower'
+                  - 'iaa'
+                  - 'leaf'
+                  - 'root'
+                  - 'salicylic'
+                  - 'nacl'
+                  - 'young'
+                  - 't87'
+            - name: material2
+              description: Tissue or treatment type
+              type: string
+              required: true
+              default: 'leaf'
+              enum:
+                  - 'flower'
+                  - 'iaa'
+                  - 'leaf'
+                  - 'root'
+                  - 'salicylic'
+                  - 'nacl'
+                  - 'young'
+                  - 't87'
+            - name: foldchange
+              description: Fold change
+              type: number
+              format: float
+              default: 5.0
+              required: true

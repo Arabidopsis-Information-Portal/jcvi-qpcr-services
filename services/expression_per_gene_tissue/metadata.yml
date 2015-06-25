@@ -1,0 +1,43 @@
+---
+
+name: expression_per_gene_tissue
+description: JCVI RT-qPCR Webservice returns expression data by gene & tissue
+version: 0.3
+
+authors:
+    - name: Erik Ferlanti
+      email: erik@jcvi.org
+      sponsor_organization: JCVI
+      sponsor_uri: http://www.jcvi.org
+
+type: query
+main_module: services.expression_per_gene_tissue.main.py
+url: http://www.jcvi.org/cgi-bin/arabidopsis/qpcr/ExpressionPerGenePerTissue
+validate_request: true
+whitelist:
+    - www.jcvi.org
+icon: jcvi-logo.png
+requirements:
+    - requests
+
+endpoints:
+    /search:
+        parameters:
+            - name: transcript
+              description: Arabidopsis gene identifier
+              type: string
+              required: true
+              default: 'AT1G33930.1'
+            - name: material
+              description: Tissue or treatment type
+              type: string
+              required: false
+              enum:
+                  - 'flower'
+                  - 'iaa'
+                  - 'leaf'
+                  - 'root'
+                  - 'salicylic'
+                  - 'nacl'
+                  - 'young'
+                  - 't87'
