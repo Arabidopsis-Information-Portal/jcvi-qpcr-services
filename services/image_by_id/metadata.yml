@@ -16,6 +16,7 @@ url: http://www.jcvi.org/arabidopsis/qpcr/get_image.php
 validate_request: true
 whitelist:
     - www.jcvi.org
+icon: jcvi-logo.png
 requirements:
     - requests
 
