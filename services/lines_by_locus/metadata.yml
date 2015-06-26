@@ -3,6 +3,11 @@
 name: lines_by_locus
 description: Given a valid AGI locus return line identifiers from 2010 Reporter Image data
 version: 0.1
+tags:
+    - 'expression'
+    - 'arabidopsis'
+    - 'GFP'
+    - 'reporter'
 
 authors:
     - name: Erik Ferlanti

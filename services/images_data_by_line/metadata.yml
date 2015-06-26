@@ -3,6 +3,11 @@
 name: images_data_by_line
 description: Given a line return image identifiers (plus expression data) from 2010 Reporter Image data
 version: 0.1
+tags:
+    - 'expression'
+    - 'arabidopsis'
+    - 'GFP'
+    - 'reporter'
 
 authors:
     - name: Erik Ferlanti

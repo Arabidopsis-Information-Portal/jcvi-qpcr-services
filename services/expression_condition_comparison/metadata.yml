@@ -3,6 +3,10 @@
 name: expression_condition_comparison
 description: Given two tissues/treatments return expression comparison data from 2010 Arabidopsis qPCR data
 version: 0.3
+tags:
+    - 'expression'
+    - 'arabidopsis'
+    - 'qPCR'
 
 authors:
     - name: Erik Ferlanti

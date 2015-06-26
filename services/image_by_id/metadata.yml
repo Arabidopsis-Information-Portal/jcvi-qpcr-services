@@ -3,6 +3,11 @@
 name: image_by_id
 description: Given an identifier return a GFP image from 2010 Reporter Image data
 version: 0.1
+tags:
+    - 'expression'
+    - 'arabidopsis'
+    - 'GFP'
+    - 'reporter'
 
 authors:
     - name: Erik Ferlanti
