@@ -1,7 +1,7 @@
 ---
 
 name: images_by_line
-description: Given a line return image identifiers from 2010 Reporter Image data
+description: Given a line return image identifiers from 2010 GFP reporter image data
 version: 0.1
 tags:
     - 'expression'

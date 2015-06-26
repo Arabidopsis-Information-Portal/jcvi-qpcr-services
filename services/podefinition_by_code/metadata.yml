@@ -1,7 +1,7 @@
 ---
 
 name: podefinition_by_code
-description: Given a PO code return PO information from 2010 Reporter Image data
+description: Given a PO code return PO information from 2010 GFP reporter image data
 version: 0.1
 tags:
     - 'expression'
