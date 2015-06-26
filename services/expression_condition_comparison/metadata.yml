@@ -1,7 +1,7 @@
 ---
 
 name: expression_condition_comparison
-description: JCVI RT-qPCR Webservice returns expression comparison data
+description: Given two tissues/treatments return expression comparison data from 2010 Arabidopsis qPCR data
 version: 0.3
 
 authors:
@@ -57,3 +57,12 @@ endpoints:
               format: float
               default: 5.0
               required: true
+
+sources:
+    - title: Completing the Expression Catalog of the Arabidopsis Transcriptome by Quantitative Real Time PCR
+      description: Provide the research community with a catalog of expression profiles for all of the approximately 4,000 Arabidopsis genes for which such data do not currently exist.
+      sponsor_organization_name: JCVI
+      sponsor_uri: http://www.jcvi.org/
+      provider_name: Christopher D. Town
+      provider_email: cdtown@jcvi.org
+      uri: http://arabidopsis.jcvi.org/arabidopsis/qpcr/index.shtml
