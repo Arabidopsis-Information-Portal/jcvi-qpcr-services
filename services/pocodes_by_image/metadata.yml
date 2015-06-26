@@ -35,9 +35,9 @@ endpoints:
               required: true
 
 sources:
-    - title: Completing the Expression Catalog of the Arabidopsis Transcriptome by Quantitative Real Time PCR
-      description: Provide the research community with a catalog of expression profiles for all of the approximately 4,000 Arabidopsis genes for which such data do not currently exist.
-      sponsor_organization_name: JCVI
+    - title: Arabidopsis genes of unknown function
+      description: Serves qPCR expression and GFP reporter images for Arabidopsis genes of unknown function
+      sponsor_organization_name: J. Craig Venter Institute
       sponsor_uri: http://www.jcvi.org/
       provider_name: Christopher D. Town
       provider_email: cdtown@jcvi.org
