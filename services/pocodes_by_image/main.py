@@ -7,12 +7,12 @@ def search(args):
 
     image is an identifier and is mandatory
     """
-    image = args['image']
+    image_id = args['image_id']
 
     """
     Make the request to the remote service
     """
-    response = tools.do_request('POCodePerImageID.php', image=image)
+    response = tools.do_request('POCodePerImageID.php', image=image_id)
 
     """
     Iterate through the results
@@ -23,7 +23,7 @@ def search(args):
     for result in response['po_codes']:
 
         record = {
-                'image': image,
+                'image_id': image_id,
                 'class': 'image_property',
                 'source_text_description': 'Reporter_Image_data',
                 'po_code_record': {

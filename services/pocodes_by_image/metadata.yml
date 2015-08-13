@@ -28,11 +28,12 @@ requirements:
 endpoints:
     /search:
         parameters:
-            - name: image
+            - name: image_id
               description: Image identifier
               type: integer
               format: int32
               required: true
+              default: 1111
 
 sources:
     - title: Arabidopsis genes of unknown function

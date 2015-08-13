@@ -33,6 +33,7 @@ endpoints:
               type: integer
               format: int32
               required: true
+              default: 1111
             - name: width
               description: Width of image (resize)
               type: integer
