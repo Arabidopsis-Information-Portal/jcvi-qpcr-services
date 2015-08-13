@@ -2,7 +2,7 @@
 
 name: images_data_by_line
 description: Given a line return image identifiers (plus expression data) from 2010 GFP reporter image data
-version: 0.1
+version: 0.2
 tags:
     - 'expression'
     - 'arabidopsis'
@@ -28,7 +28,7 @@ requirements:
 endpoints:
     /search:
         parameters:
-            - name: line
+            - name: line_id
               description: Line (combination of plate, well, plant & dip number)
               type: string
               required: true

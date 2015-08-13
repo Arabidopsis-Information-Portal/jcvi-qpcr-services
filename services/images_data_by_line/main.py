@@ -7,12 +7,12 @@ def search(args):
 
     line is a combination of plate, well, plant & dip number (mandatory)
     """
-    line = args['line']
+    line_id = args['line_id']
 
     """
     Make the request to the remote service
     """
-    response = tools.do_request('ImageDataPerLineID.php', line=line)
+    response = tools.do_request('ImageDataPerLineID.php', line_id=line_id)
 
     """
     Iterate through the results
@@ -23,11 +23,12 @@ def search(args):
     for result in response['images']:
 
         record = {
-                'line': line,
+                'line_id': line_id,
                 'class': 'line_property',
                 'source_text_description': 'Reporter_Image_data',
                 'image_record': {
                         'image_id': result['image_id'],
+                        'image_url': result['image_url'],
                         'po_codes': result['po_codes']
                 }
             }
