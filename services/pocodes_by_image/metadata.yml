@@ -2,7 +2,7 @@
 
 name: pocodes_by_image
 description: Given an image identifier return expression & PO information from 2010 GFP reporter image data
-version: 0.1
+version: 0.2
 tags:
     - 'expression'
     - 'arabidopsis'
