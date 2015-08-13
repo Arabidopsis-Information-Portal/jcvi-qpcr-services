@@ -12,7 +12,7 @@ def search(args):
     """
     Make the request to the remote service
     """
-    response = tools.do_request('POCodePerImageID.php', image=image_id)
+    response = tools.do_request('POCodePerImageID.php', image_id=image_id)
 
     """
     Iterate through the results
