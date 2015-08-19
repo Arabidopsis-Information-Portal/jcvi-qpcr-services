@@ -13,7 +13,7 @@ def search(args):
     """
     Make the request to the remote service
     """
-    response = tools.do_request_generic('SearchAvailableAGILocus.php', **payload)
+    response = tools.do_request_generic('SearchAvailableAGITranscript.php', **payload)
 
     """
     At this point, we've gotten a 200 status from the remote GET so we
@@ -22,5 +22,5 @@ def search(args):
     return response.headers['Content-Type'], response.content
 
 def list(args):
-    response = tools.do_request_generic('SearchAvailableAGILocus.php')
+    response = tools.do_request_generic('SearchAvailableAGITranscript.php')
     return response.headers['Content-Type'], response.content

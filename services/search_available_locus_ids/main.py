@@ -8,17 +8,12 @@ def search(args):
     width: image dimension to resize (optional)
     height: image dimension to resize (optional)
     """
-    payload = {'image_id': args['image_id']}
-
-    if args.has_key('width'):
-        payload['width'] = args['width']
-    if args.has_key('height'):
-        payload['height'] = args['height']
+    payload = {'search_term': args['search_term']}
 
     """
     Make the request to the remote service
     """
-    response = tools.do_request_generic('get_image.php', **payload)
+    response = tools.do_request_generic('SearchAvailableAGILocus.php', **payload)
 
     """
     At this point, we've gotten a 200 status from the remote GET so we
@@ -27,4 +22,5 @@ def search(args):
     return response.headers['Content-Type'], response.content
 
 def list(args):
-    raise Exception('not implemented yet')
+    response = tools.do_request_generic('SearchAvailableAGILocus.php')
+    return response.headers['Content-Type'], response.content
