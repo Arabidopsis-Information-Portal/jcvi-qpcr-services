@@ -1,0 +1,46 @@
+---
+
+name: search_available_locus_ids
+description: Given a search string filter the list of available locus ids with reporter images
+version: 0.1
+tags:
+    - 'expression'
+    - 'arabidopsis'
+    - 'GFP'
+    - 'reporter'
+
+authors:
+    - name: Erik Ferlanti
+      email: erik@jcvi.org
+      sponsor_organization: JCVI
+      sponsor_uri: http://www.jcvi.org
+
+type: generic
+main_module: services.search_available_locus_ids.main.py
+url: http://www.jcvi.org/arabidopsis/qpcr/SearchAvailableAGILocus.php
+validate_request: true
+whitelist:
+    - www.jcvi.org
+icon: jcvi-logo.png
+requirements:
+    - requests
+
+endpoints:
+    /search:
+        parameters:
+            - name: search_term
+              description: Search string
+              type: string
+              required: true
+              default: at1
+    /list:
+        description: Return all the available AGI locus ids with reporter images
+
+sources:
+    - title: Arabidopsis genes of unknown function
+      description: Serves qPCR expression and GFP reporter images for Arabidopsis genes of unknown function
+      sponsor_organization_name: J. Craig Venter Institute
+      sponsor_uri: http://www.jcvi.org/
+      provider_name: Christopher D. Town
+      provider_email: cdtown@jcvi.org
+      uri: http://arabidopsis.jcvi.org/arabidopsis/qpcr/index.shtml
