@@ -1,8 +1,8 @@
 ---
 
-name: search_available_locus_ids
+name: reporter_search_available_locus_ids
 description: Given a search string filter the list of available locus ids with reporter images
-version: 0.1
+version: 0.2
 tags:
     - 'expression'
     - 'arabidopsis'

@@ -1,8 +1,8 @@
 ---
 
-name: search_available_transcripts
+name: qpcr_search_available_transcripts
 description: Given a search string filter the list of available transcripts with expression data
-version: 0.1
+version: 0.2
 tags:
     - 'expression'
     - 'arabidopsis'
